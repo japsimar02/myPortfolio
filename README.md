@@ -1,4 +1,4 @@
-#  [Portfolio]()
+#  [Portfolio](https://japsimar02.github.io/myPortfolio/)
 
 - A fully responsive portfolio website, displaying Home, Work, Education, Experience, About, and Contact page.
 - Has a side navbar
