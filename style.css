@@ -1,0 +1,600 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    background-color: black;
+}
+
+/* Mouse pointer */
+#circle-pointer{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .1s;
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 99;
+}
+
+/* cover page */
+#main{
+    width: 100%;
+    background-color: black;
+}
+
+#hero{
+    opacity: 0.9;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    position: relative;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
+    color: white;
+}
+
+#nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* name display with animation */
+.bounding{
+    width: fit-content;
+    overflow: hidden;
+}
+
+.bounding .boundingElem{
+    transform: translateY(100%);
+}
+
+#heading{
+    margin-top: 100px;
+}
+
+#heading h1{
+    font-size: 8rem;
+    margin-left: 30px;
+    opacity: 0.7;
+    line-height: 0.9;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+#heading #text2{
+    margin-left: 25vw;
+}
+
+.heading-block{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: fit-content;
+}
+
+.heading-block h4{
+    text-transform: uppercase;
+    font-size: 1vmax;
+    text-align: right !important;
+}
+
+.side-stuff{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 170px;
+    padding-right: 30px;
+}
+
+.side-stuff h5{
+    text-align: right;
+    margin-top: .4vw;
+    font-size: 1.1vmax;
+    text-transform: uppercase;
+}
+
+#main-footer{
+    padding: 0 1vw;
+    width: 100%;
+    position: absolute;
+    bottom: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+#main-footer a{
+    color: white;
+    text-decoration: none;
+}
+
+#main-footer #icons{
+    display: flex;
+    gap: 5px;
+}
+
+.circle{       /* up and down arrow links */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #888;
+}
+
+
+
+/* sidebar */
+
+#open-nav-sidebar{
+    cursor: pointer;
+}
+
+.sidebar-nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background-color: transparent;
+    transform: translateX(-100%);
+    display: flex;
+    transition: transform 0.3s;
+}
+
+.sidebar-show{
+    transform: translateX(0%);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.sidebar-nav-left{
+    background: transparent;
+    backdrop-filter: blur(12px);
+    width: 365px;
+    height: 100vh;
+    box-sizing: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.sidebar-item{
+    padding-left: 30px;
+    margin-top: 4px;
+    margin-bottom: 7px;
+    padding-top: 7px;
+}
+
+.sidebar-item h2{
+    color: white;
+    opacity: 0.8;
+    padding-top: 1.3rem;
+    font-size: 20px;
+}
+
+.sidebar-item p{
+    color: white;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+#sidebar-ul{
+    list-style-type: none;
+}
+
+.sidebar{
+    color: white;
+    opacity: 0.8;
+    font-size: 2rem;
+    padding-top: 1.4rem;
+}
+
+.sidebar a{
+    color: white;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+#close-nav-sidebar {
+    background-color: transparent;
+    align-self: flex-start;
+    font-size: 30px;
+    opacity: 0.8;
+    border: none;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.sidebar-wrap {
+    height: 620px;
+    overflow: auto;
+    padding-bottom: 200px;
+}
+
+.submenu {
+    list-style-type: none;
+    padding-left: 30px;
+    display: none;
+    opacity: 0;
+    font-size: 1.4rem;
+    padding-top: 10px;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.submenu-items{
+    margin-top: 7px;
+}
+  
+.has-submenu::after {
+    margin-left: 5px;
+}
+  
+.has-submenu.open::after {
+    transform: rotate(90deg);
+}
+  
+.account{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account i{
+    padding-top: 7px;
+    padding-bottom: 0px;
+    padding-right: 9px;
+    color: white;
+    opacity: 0.9;
+}
+
+.account-link{
+    text-decoration: none;
+}
+
+/* second page - projects */
+
+#second{
+    padding-top: 200px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 10vw;
+    padding-right: 10vw;
+    padding-left: 3vw;
+    color: white;
+}
+
+.project-heading{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 4vw;
+    opacity: 0.7;
+    font-weight: lighter;
+}
+
+.project-heading h1{
+    position: absolute;
+}
+
+.project a{
+    text-decoration: none;
+    color: white;
+    opacity: 0.86;
+}
+
+.elem{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+    padding: 4.5vw 3vw;
+    padding-right: 5px;
+    border-top: 1px solid #888;
+}
+
+.elem h1{
+    font-size: 5vw;
+    text-transform: uppercase;
+    opacity: 0.7;
+    font-weight: lighter;
+}
+
+.elem h5{
+    font-weight: lighter;
+    font-size: 1vmax;
+}
+
+.lastElem{
+    border-bottom: 1px solid #777;
+}
+
+.elem img{
+    opacity: 0;
+    pointer-events: none;
+    height: 110%;
+    z-index: 999;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 25%;
+}
+
+/* education section */
+
+#education {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    height: 100vh;
+}
+
+.edu-heading{
+    padding-top: 40vmax;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5vmax;
+    opacity: 0.4;
+}
+
+#main-circle{
+    gap: 20px;
+    position: absolute;
+    align-items: center;
+    left: -80vmin;
+    top: 50%;
+    border-radius: 50%;
+    width: 160vmin;
+    height: 160vmin;
+    transform: translate(0%, -50%) rotate(100deg);
+    background-color: black;
+    border: .1px solid rgb(26, 26, 26);
+    z-index: -76;
+    /* box-shadow: 1px 1px 2px rgba(79, 78, 78, 0.9); */
+}
+
+.stripe{
+    color: white;
+    position: absolute;
+    top: 50%; /* center me krne ke liye */
+    left: 50%; /* circle is 50% out of the screen, line ko poora andar lane ke liye, translate 50% right */
+    transform: translate(0%, -50%);  
+    transform-origin: 0% 50%;
+    width: 100%;
+    height: 60px;
+    display: flex;
+}
+
+.str1{
+    transform: translate(0%, -50%) rotate(-20deg);
+}
+
+.str2{
+    transform: translate(0%, -50%) rotate(-10deg);
+}
+
+.str4{
+    transform: translate(0%, -50%) rotate(10deg);
+}
+
+.str5{
+    transform: translate(0%, -50%) rotate(20deg);
+}
+
+.firsthalf{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.smallcircle{
+    position: absolute;
+    right: -.3vw;
+    top: 30%;
+    transform: translate(0, -50%);
+    width: 0.4vw;
+    height: 0.4vw;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.3;
+}
+
+.secondhalf{
+    opacity: 0.12;
+    width: 50%;
+    color: white;
+    height: 100%;
+}
+
+.secondhalf h4{
+    padding-left: 20px;
+    font-size: 1.8vw;
+}
+
+.secondhalf h6{
+    padding-left: 20px;
+    font-size: 0.8vw;
+}
+
+
+#panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 5%;
+    height: 40%;
+    top: 50%;
+    right: 0%;
+    color: white;
+    position: absolute;
+    transform: translate(0, -50%);
+}
+
+.minicircle{
+    cursor: pointer;
+    color: #fff;
+    width: 1.6vw;
+    height: 1.6vw;
+    border-radius: 50%;
+    opacity: 0.3;
+    background-color: white;
+}
+
+
+/* about section */
+
+#about{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    padding-right: 8vw;
+    padding-left: 30vw;
+    margin-top: 300px;
+    gap: 50px;
+}
+
+#about-image img{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+#about-text{
+    color: white;
+    width: 30rem;
+}
+
+#about-text h5{
+    opacity: 0.7;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#about-text p{
+    margin-bottom: 30px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+#about-text a{
+    padding: 12px 22px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+#about-page-footer{
+    color: white;
+    background-color: black;
+    font-size: .7em;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding: 20px 30px;
+    padding-bottom: 7vw;
+}
+
+#about-page-footer i{
+    color: white;
+    font-size: 13px;
+    font-weight: light;
+}
+
+/* footer */
+
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 30px;
+}
+
+#footerleft{
+    color: white;
+    display: flex;
+    gap: 20px;
+    font-weight: lighter;
+}
+
+#time{
+    color: white;
+    background-color: black;
+}
+
+#footerright{
+    display: flex;
+    font-weight: lighter;
+    gap: 20px;
+}
+
+#footer a{
+    font-size: 1.1rem;
+    z-index: 99;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+/* responsive */
+
+
+@media screen and (max-width: 768px) {
+    #heading h1{
+        font-size: 3rem;
+    }
+    #circle-pointer{
+        width: 15px;
+        height: 15px;
+    }
+    .side-stuff h5{
+        font-size: .8rem;
+    }
+    #main-circle{
+        top: 40%;
+        left: -70vmin;
+        width: 120vmin;
+        height: 120vmin;
+    }
+    .edu-heading{
+        padding-top: 27vh;
+        font-size: 3vw;
+    }
+    #panel{
+        top: 37%;
+    }
+    #about {
+        flex-direction: column;
+        padding-left: 10vw;
+        padding-bottom: 5vw;
+        margin-top: 30px;
+    }
+    #about-text{
+        width: 20rem;
+    }
+    #footer a{
+        font-size: 0.8rem;
+    }
+}

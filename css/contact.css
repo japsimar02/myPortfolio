@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(29, 27, 27);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container form{
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(12px);
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.container form h1{
+    color: #fff;
+    font-weight: lighter;
+    margin-top: 15px;
+    width: 60vmax;
+    height: 3rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.container form input{
+    width: 250px;
+    height: 20px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-top: -50px;
+    gap: 70px;
+    padding-bottom: 0;
+    background: none;
+    border-bottom: 2px solid #fff;
+    opacity: 0.8;
+    border-radius: 2px;
+}
+
+.container form input::placeholder{
+    color: #ddd;
+}
+
+.input-text{
+    color: white;
+}
+
+.container form #lastname, .container form #mobile{
+    padding-left: 10px;
+    margin-left: 30px;
+}
+
+.container form h4{
+    font-weight: lighter;
+    color: #ddd;
+    opacity: 0.8;
+    font-weight: light;
+    width: 600px;
+    margin-top: -20px; 
+}
+
+.container form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 15px;
+    margin-top: -150px;
+    opacity: 0.8;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 40px;
+    border-radius: 2px;
+    max-height: 40px;
+}
+
+textarea::-webkit-scrollbar{
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background-color: #dadada;
+}
+
+.container form #button{
+    border: none;
+    background: #555;
+    border-radius: 50px;
+    color: #fff;
+    margin-top: -120px;
+    text-align: center;
+    font-weight: lighter;
+    align-content: center;
+    font-size: 20px;
+    width: 100px;
+    height: 30px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.container form #button:hover{
+    opacity: 0.7;
+}
+
+.back{
+    background-color: rgb(29, 27, 27);;
+    color: white;
+    /* opacity: 0.8; */
+    padding-top: 10px;
+    padding-left: 10px;
+}

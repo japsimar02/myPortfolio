@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.main{
+    display: flex;
+    background-color: black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.heading{
+    padding-top: 17%;
+    color: white;
+    opacity: 0.8;
+    text-align: center;
+    font-size: 3rem;
+}
