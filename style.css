@@ -346,7 +346,7 @@ html, body{
 }
 
 .edu-heading{
-    padding-top: 40vmax;
+    padding-top: 40vmin;
     color: white;
     text-transform: uppercase;
     font-size: 1.5vmax;
